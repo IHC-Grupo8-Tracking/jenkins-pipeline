@@ -1,11 +1,7 @@
 def TCONST1 = 'top-const-1'
 
 pipeline {
-    agent{
-        docker {
-            image 'gradle:6.9.3-jdk11-alpine'
-        }   
-    }
+    agent any
 
     options {
         timestamps()
@@ -21,6 +17,14 @@ pipeline {
     }
 
     stages {
+        
+        stage('Build container'){
+            steps {
+                script {
+                    app = docker.build('jenkins-pipeline-example:${env.BUILD_ID}')   
+                }
+            }
+        }
 
         stage('Test Environment Variables') {
 
