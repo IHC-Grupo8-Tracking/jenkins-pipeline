@@ -67,7 +67,8 @@ pipeline {
         
         stage('Deployment') {
             steps {
-               echo 'this will deploy de software'   
+               echo 'this will deploy de software'
+                echo 'Perhaps deplying to kubernets'
             }
         }
     }
