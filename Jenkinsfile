@@ -1,7 +1,11 @@
 def TCONST1 = 'top-const-1'
 
 pipeline {
-    agent any
+    agent{
+        docker {
+            image 'gradle:6.9.3-jdk11-alpine'
+        }   
+    }
 
     options {
         timestamps()
