@@ -64,5 +64,11 @@ pipeline {
                 }
             }
         }
+        
+        stage('Deployment') {
+            steps {
+               echo 'this will deploy de software'   
+            }
+        }
     }
 }
