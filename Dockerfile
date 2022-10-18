@@ -4,5 +4,6 @@ WORKDIR /app
 COPY . /app
 RUN cd /app && ./gradlew build
 
-#FROM openjdk:11.0.16-jre
-#COPY --from=builder /app/build/ 
+FROM openjdk:11.0.16-jre
+COPY --from=builder /app/build/libs/jenkins-pipeline-1.0-SNAPSHOT.jar .
+CMD ['java', '-jar', 'jenkins-pipeline-1.0-SNAPSHOT.jar']
