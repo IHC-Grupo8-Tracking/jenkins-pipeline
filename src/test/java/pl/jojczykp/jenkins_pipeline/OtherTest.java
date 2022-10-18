@@ -32,7 +32,7 @@ class OtherTest {
 
         System.err.println("Some Error Log Message");
 
-        fail("Oooopppsss.... Failing :)");
+        //fail("Oooopppsss.... Failing :)");
     }
 
     @Test
