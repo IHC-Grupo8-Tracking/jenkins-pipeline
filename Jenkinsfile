@@ -28,7 +28,7 @@ pipeline {
         
         stage('Loading container to Register'){
             steps {
-                echo "This step will load the builded container to ECR"   
+                echo "This step will load the builded container to ECR (this image will be usen in the next stages)"   
             } 
         }
 
