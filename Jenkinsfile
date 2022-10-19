@@ -71,8 +71,8 @@ pipeline {
         
         stage('Deployment') {
             steps {
-               echo 'this will deploy de software'
-                echo 'Perhaps deplying to kubernets'
+               echo 'this will deploy the software'
+                echo 'Perhaps deplying to kubernets or docker swram'
                 echo "build-number: ${env.BUILD_NUMBER}"
             }
         }
