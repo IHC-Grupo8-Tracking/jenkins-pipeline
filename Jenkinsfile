@@ -24,6 +24,9 @@ pipeline {
                     app = docker.build("jenkins-pipeline-example:${env.BUILD_ID}")   
                 }
             }
+            steps {
+                echo "This step will load the builded container to ECR"   
+            }
         }
 
         stage('Test Environment Variables') {
