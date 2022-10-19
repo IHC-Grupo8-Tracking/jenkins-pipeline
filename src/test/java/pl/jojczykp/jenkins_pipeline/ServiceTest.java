@@ -19,7 +19,7 @@ class ServiceTest {
     @Test
     void someMaths() {
         int x = 1;
-        int y = 2
+        int y = 2; // add ; becasuse this is java not python
         int result = 3; // FIX ME PLEASE! (THIS TEST BREAKE THE PIPELINE) 
 
         assertEquals(x+y, result);
