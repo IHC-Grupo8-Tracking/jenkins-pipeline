@@ -21,7 +21,8 @@ pipeline {
         stage('Build container'){
             steps {
                 script {
-                    app = docker.build("jenkins-pipeline-example:${env.BUILD_ID}")   
+                    app = docker.build("jenkins-pipeline-example:${env.BUILD_ID}") 
+                    app = docker.build("custom-container-name:${env.BUILD_ID}")  
                 }
             }
         }
