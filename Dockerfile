@@ -1,5 +1,7 @@
 FROM gradle:6.9.3-jdk11-alpine AS builder
 
+LABEL version=0.0.1
+
 WORKDIR /app
 COPY . /app
 RUN cd /app && ./gradlew build
